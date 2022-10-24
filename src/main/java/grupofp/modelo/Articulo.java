@@ -7,6 +7,7 @@ package main.java.grupofp.modelo;
  */
 public class Articulo {
 
+	//comentario demo
 
 	private String codigo;
     private String descripcion;
