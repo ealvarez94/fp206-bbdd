@@ -55,6 +55,12 @@ public class OnlineStore {
                 else if (opcion == '2'){
                 	gestionOS.mostrarClientes(controlador);
                 }
+                else if (opcion == '3'){
+                gestionOS.mostrarClientesEstandard(controlador);
+                }
+                else if (opcion == '4'){
+                gestionOS.mostrarClientesPremium(controlador);
+                }
               
             	break;
             	
