@@ -1,17 +1,18 @@
 package main.java.grupofp.modelo;
-import java.time.*;
+
+/*
+*
+* @author jeps
+*/
 
 public class Pedido {
    
-	
-
 	private int numPedido;
     private float unidad;
     private String fechaPedido;
     private String horaPedido;      
     private Articulo articulo;
     private Cliente cliente;
-    
     
     //Constructor
     public Pedido(int numPedido, float unidad, String fechaPedido, String horaPedido, Articulo articulo,
