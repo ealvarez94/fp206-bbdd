@@ -1,6 +1,7 @@
 package main.java.grupofp.modelo;
 
 import java.util.Iterator;
+import java.util.stream.Collectors;
 
 /*
 *
@@ -67,4 +68,21 @@ public class ListaCliente extends Lista<Cliente>{
     	  
        }return cadena;
     }
+
+	public String toStringPremium() {
+		String cadena = "";
+		for (Cliente cliente : lista.stream().filter(c -> c.tipoCliente().equals("Premium")).collect(Collectors.toList())) {
+			cadena+=(cliente.toString())+"\n";
+
+		}return cadena;
+	}
+
+	public String toStringEstandard() {
+		String cadena = "";
+		for (Cliente cliente : lista.stream().filter(c -> c.tipoCliente().equals("Estandard")).collect(Collectors.toList())) {
+			cadena+=(cliente.toString())+"\n";
+
+		}return cadena;
+	}
+
 } 

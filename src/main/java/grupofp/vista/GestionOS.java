@@ -5,9 +5,7 @@ import java.time.LocalTime;
 import java.util.Scanner;
 
 import main.java.grupofp.controlador.Controlador;
-import main.java.grupofp.modelo.Articulo;
-import main.java.grupofp.modelo.Cliente;
-import main.java.grupofp.modelo.Pedido;
+import main.java.grupofp.modelo.*;
 
 /*
 *
@@ -60,8 +58,15 @@ public class GestionOS {
 
 		
 	public void mostrarClientes(Controlador controlador) {
-	System.out.println(controlador.getDatos().getClientes().toString());	
+	System.out.println(controlador.getDatos().getClientes().toString());
+	}
 
+	public void mostrarClientesPremium(Controlador controlador) {
+		System.out.println(controlador.getDatos().getClientes().toStringPremium());
+	}
+
+	public void mostrarClientesEstandard(Controlador controlador) {
+		System.out.println(controlador.getDatos().getClientes().toStringEstandard());
 	}
 	
 	public void anadirPedidos(Controlador controlador) throws Exception {

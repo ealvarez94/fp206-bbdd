@@ -10,8 +10,8 @@ import java.util.ArrayList;
 
 public class Datos {
     
-	protected ListaCliente clientes; 
-    protected ListaArticulo articulos;
+	protected ListaCliente clientes;
+	protected ListaArticulo articulos;
     protected ListaPedido pedidos; 
     
    // Constructor
