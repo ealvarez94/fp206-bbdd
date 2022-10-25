@@ -1,10 +1,10 @@
 
 package main.java.grupofp.modelo;
 
-/**
- *
- * @author joelj
- */
+/*
+*
+* @author jeps
+*/
 
 public class ClienteEstandard extends Cliente{
   
@@ -17,4 +17,16 @@ public class ClienteEstandard extends Cliente{
     public String tipoCliente (){
     return "Estandard";
     }
+	
+	@Override
+	public int cuotaAnual() {
+	
+		return 0;
+	}
+
+	@Override
+	public int descuentoEnv() {
+	
+		return 0;
+	}
 }

@@ -3,6 +3,10 @@ package main.java.grupofp.modelo;
 import java.util.ArrayList;
 import java.util.Scanner;
 
+/*
+*
+* @author jeps
+*/
 
 public abstract class Cliente {
 
@@ -10,7 +14,6 @@ public abstract class Cliente {
     protected String nif; 
     protected String domicilio; 
     protected String email;
-    
  
 //Constructor
     public Cliente(String nombre, String nif, String domicilio, String email) {
@@ -57,20 +60,17 @@ public abstract class Cliente {
         this.email = email; 
     }
     
-
+    //Metodos
+    
+    public abstract String tipoCliente();
         
-		public String tipoCliente() {
-			// TODO Auto-generated method stub
-			return null;
-		}
+    public abstract int cuotaAnual();
+   
+    public abstract int descuentoEnv();
 
-
-@Override
-public String toString() {
-	return "Cliente [nombre=" + nombre + ", nif=" + nif + ", domicilio=" + domicilio + ", email=" + email
-			+ ", getNombre()=" + getNombre() + ", getNif()=" + getNif() + ", getDomicilio()=" + getDomicilio()
-			+ ", getEmail()=" + getEmail() + ", tipoCliente()=" + tipoCliente() + ", getClass()=" + getClass()
-			+ ", hashCode()=" + hashCode() + ", toString()=" + super.toString() + "]";
-}
+    @Override
+    public String toString() {
+    	return "Cliente{" + "nombre=" + nombre + ", NIF=" + nif + ", domicilio=" + domicilio + ", email=" + email + ", tipoC="+ tipoCliente() + ", calcAnual="  +cuotaAnual()+ ", descuentoEnv= " +descuentoEnv()+ "}";
+    }
 }
 
