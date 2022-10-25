@@ -1,13 +1,12 @@
 
 package main.java.grupofp.modelo;
 
-/**
+/*
  *
- * @author joelj
+ * @author jeps
  */
-public class Articulo {
 
-	//comentario demo
+public class Articulo {
 
 	private String codigo;
     private String descripcion;

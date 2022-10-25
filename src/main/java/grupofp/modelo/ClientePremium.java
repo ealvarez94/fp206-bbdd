@@ -1,10 +1,11 @@
 
 package main.java.grupofp.modelo;
 
-/**
- *
- * @author joelj
- */
+/*
+*
+* @author jeps
+*/
+
 public class ClientePremium extends Cliente{
 
 	public ClientePremium(String nombre, String NIF, String domicilio, String email) {
@@ -16,4 +17,16 @@ public class ClientePremium extends Cliente{
     public String tipoCliente (){
     return "Premium";
     }
+	
+	@Override
+	public int cuotaAnual() {
+
+		return 30;
+	}
+
+	@Override
+	public int descuentoEnv() {
+
+		return 30;
+	}
 }
