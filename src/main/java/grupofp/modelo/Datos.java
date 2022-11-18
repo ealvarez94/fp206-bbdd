@@ -12,7 +12,7 @@ public class Datos {
     
 	protected ListaCliente clientes;
 	protected ListaArticulo articulos;
-    protected ListaPedido pedidos; 
+    protected ListaPedido pedidos;
     
    // Constructor
     
@@ -25,6 +25,11 @@ public class Datos {
 	
    //Getters & Setters
     public ListaCliente getClientes() {
+		return clientes;
+	}
+
+	public ListaCliente getClientesPremium(){
+		ListaCliente ClientePremium = clientes;
 		return clientes;
 	}
 	public void setClientes(ListaCliente clientes) {
