@@ -21,7 +21,7 @@ public class OnlineStore {
     char opcion;
     do {
         System.out.println("");
-        System.out.println("1. Gestion Articulos");
+        System.out.println("1. Gestion de Articulos");
         System.out.println("2. Gestion de Clientes");
         System.out.println("3. Gestion de Pedidos");
         opcion = pedirOpcion();
@@ -84,7 +84,7 @@ public class OnlineStore {
         
 static char pedirOpcion() {
     String resp;
-    System.out.print("Elige una opcionn (1,2,3 o 4): ");
+    System.out.print("Elige una opcion (1,2,3 o 4): ");
     Scanner teclado = new Scanner(System.in);
 	resp = teclado.nextLine();
     if (resp.isEmpty()) {
@@ -95,7 +95,7 @@ static char pedirOpcion() {
 
 static char gestionArticulos() {
     String resp;
-    System.out.print("Elige una opcionn (1,2): ");
+    System.out.print("Elige una opcion (1,2): ");
     Scanner teclado = new Scanner(System.in);
 	resp = teclado.nextLine();
     if (resp.isEmpty()) {
@@ -106,7 +106,7 @@ static char gestionArticulos() {
 
 static char gestionClientes() {
     String resp;
-    System.out.print("Elige una opcionn (1,2,3 o 4): ");
+    System.out.print("Elige una opcion (1,2,3 o 4): ");
     Scanner teclado = new Scanner(System.in);
 	resp = teclado.nextLine();
     if (resp.isEmpty()) {
@@ -116,7 +116,7 @@ static char gestionClientes() {
 }
 static char gestionPedidos() {
 	 String resp;
-	    System.out.print("Elige una opcionn (1,2,3 o 4): ");
+	    System.out.print("Elige una opcion (1,2,3 o 4): ");
 	    Scanner teclado = new Scanner(System.in);
 		resp = teclado.nextLine();
 	    if (resp.isEmpty()) {

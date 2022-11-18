@@ -51,11 +51,9 @@ public class GestionOS {
 	String domicilio = teclado.nextLine();
 	String email = teclado.nextLine();
 	String tipoCliente = teclado.nextLine();
-	
 
 	controlador.getDatos().getClientes().aniadir(nombre,nif,domicilio,email,tipoCliente);
 	}
-
 		
 	public void mostrarClientes(Controlador controlador) {
 	System.out.println(controlador.getDatos().getClientes().toString());
@@ -82,7 +80,6 @@ public class GestionOS {
 	String codigoArticulo = teclado.nextLine();
 	String nifCliente = teclado.nextLine();
 
-
 	controlador.getDatos().getPedidos().aniadir(Integer.parseInt(numPedido),unid,fechaPedido,horaPedido,codigoArticulo,nifCliente);
 	}
 
@@ -90,8 +87,6 @@ public class GestionOS {
 	System.out.println(controlador.getDatos().getPedidos().toString());	
 
 	}
-
-
 
 	public void eliminarPedido(Controlador controlador) throws Exception {
 		System.out.println("1. Se va a eliminar el siguiente pedido registrado, escriba el numero del pedido que desea eliminar.");

@@ -1,9 +1,5 @@
 package main.java.grupofp.modelo;
 
-import java.time.LocalDate;
-import java.time.LocalTime;
-import java.util.Iterator;
-
 /*
 *
 * @author jeps
@@ -13,9 +9,11 @@ public class ListaPedido extends Lista<Pedido>{
 	
 	
 	private ListaCliente clientes;
-	private ListaArticulo articulos;	
-	
-//Constructor	
+	private ListaArticulo articulos;
+	private float precioPedido;
+	private double precioEnvioPedido;
+
+	//Constructor	
 	public ListaPedido(ListaCliente clientes, ListaArticulo articulos) {
 		super();
 		this.clientes = clientes;
@@ -23,12 +21,12 @@ public class ListaPedido extends Lista<Pedido>{
 	}
 	
 
-	public void aniadir(int numPedido,float unidad,String fechaPedido,String horaPedido, String codigo, String nif) throws Exception {
+	public void aniadir(int numPedido, float unidad, String fechaPedido, String horaPedido, String codigo, String nif) throws Exception {
 		Articulo articulo = articulos.getAt(articulos.search(codigo));
 		Cliente cliente = clientes.getAt(clientes.search(nif));
-		Pedido pedido = new Pedido(numPedido,unidad,fechaPedido,horaPedido,articulo,cliente);
+		Pedido pedido = new Pedido(numPedido,unidad,fechaPedido,horaPedido,articulo,cliente,precioPedido,precioEnvioPedido);
 	 	if (yaExiste(pedido.getNumPedido())) {
-	 		throw new Exception ("Este pedido ya est� registrado");
+	 		throw new Exception ("Este pedido ya esta registrado");
 	 	}
 	 	else {
 	 		lista.add(pedido);

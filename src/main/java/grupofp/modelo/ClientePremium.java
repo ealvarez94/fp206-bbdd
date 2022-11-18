@@ -27,6 +27,6 @@ public class ClientePremium extends Cliente{
 	@Override
 	public int descuentoEnv() {
 
-		return 30;
+		return 20;
 	}
 }
