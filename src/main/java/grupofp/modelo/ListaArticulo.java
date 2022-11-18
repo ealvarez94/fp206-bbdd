@@ -12,7 +12,7 @@ public class ListaArticulo extends Lista<Articulo>  {
 	    public void aniadir(String codigo,String descripcion, double precio, double preparacion, double gastoEnvio) throws Exception {
 	    	Articulo articulo = new Articulo (codigo,descripcion, precio, preparacion, gastoEnvio);
 		 	if (existeArticulo(articulo.getCodigo())) {
-		 		throw new Exception ("Este art�culo ya existe.");
+		 		throw new Exception ("Este articulo ya existe.");
 		 	}
 		 	else {
 		 		lista.add(articulo);
@@ -37,7 +37,7 @@ public class ListaArticulo extends Lista<Articulo>  {
 	 			}
 	 			posicion++;
 	 		}
-	 		throw new Exception("Este art�culo no existe");
+	 		throw new Exception("Este articulo no existe");
 	 	}
 	 	
 	 	@Override

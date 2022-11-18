@@ -13,10 +13,12 @@ public class Pedido {
     private String horaPedido;      
     private Articulo articulo;
     private Cliente cliente;
+	private float precioPedido;
+	private double precioEnvioPedido;
     
     //Constructor
     public Pedido(int numPedido, float unidad, String fechaPedido, String horaPedido, Articulo articulo,
-			Cliente cliente) {
+			Cliente cliente, float precioPedido, double precioEnvioPedido) {
 		super();
 		this.numPedido = numPedido;
 		this.unidad = unidad;
@@ -24,10 +26,31 @@ public class Pedido {
 		this.horaPedido = horaPedido;
 		this.articulo = articulo;
 		this.cliente = cliente;
+		this.precioPedido = precioPedido;
+		this.precioEnvioPedido = precioEnvioPedido;
 	}
 
-    //Getters & Setters
-    
+
+	//Getters & Setters
+
+	public int add (int numberA, int numberB){
+		return numberA + numberB;
+	}
+
+	public double getPrecioPedido() {
+
+		return this.unidad * this.articulo.getPrecio();
+	}
+
+	public double getPrecioEnvio() {
+		if (cliente.tipoCliente()==("Estandard")) {
+			return articulo.getGastoEnvio();
+		} else if (cliente.tipoCliente()==("Premium")) {
+			return (articulo.getGastoEnvio() - articulo.getGastoEnvio() * 0.2 );
+		}
+		return precioEnvioPedido;
+	}
+
 	public int getNumPedido() {
 		return numPedido;
 	}
@@ -80,9 +103,14 @@ public class Pedido {
 	
 	@Override
 	public String toString() {
-		return "Pedido [numPedido=" + numPedido + ", unidad=" + unidad + ", fechaPedido=" + fechaPedido
-				+ ", horaPedido=" + horaPedido + ", articulo=" + articulo + ", cliente=" + cliente + "]";
+		return "Pedido [numPedido=" + numPedido + ", fechaPedido=" + fechaPedido + ", horaPedido=" + horaPedido + "h, articulo=" + articulo.getDescripcion() + ", unidad=" + unidad + ", precioPedido=" + getPrecioPedido() + ", precioEnvio=" + getPrecioEnvio() + ", cliente=" + cliente + "]";
 	}
+
+/*	@Override
+	public String toString() {
+		return "Pedido [numPedido=" + numPedido + ", unidad=" + unidad + ", fechaPedido=" + fechaPedido
+				+ ", horaPedido=" + horaPedido + "h, precioPedido=" + getPrecioPedido() + ", articulo=" + articulo + ", cliente=" + cliente + "]";
+	}*/
     
     
 }

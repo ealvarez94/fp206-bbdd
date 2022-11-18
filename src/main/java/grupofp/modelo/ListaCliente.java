@@ -24,7 +24,7 @@ public class ListaCliente extends Lista<Cliente>{
 	    	}
 	    	if (clienteEstandard != null ) {
 	    		if (esCliente(clienteEstandard.getNif())) {
-	    			 System.out.println("Este cliente ya est� registrado.");
+	    			 System.out.println("Este cliente ya esta registrado.");
 			 	}
 			 	else {
 			 		lista.add(clienteEstandard);
